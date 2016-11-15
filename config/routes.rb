@@ -8,4 +8,10 @@ Rails.application.routes.draw do
 
   # patients routes
   get '/patients', to: 'patients#index'
+  # GET request from /patients send to the patients controller, use the show action
+  get '/patients/:id', to: 'patients#show'
+  # POST request from /patients send to the patients controller, use the create action
+  post '/patients', to: 'patients#create'
+  patch '/patients/:id', to: 'patients#update'
+  delete '/patients/:id', to: 'patients#destroy'
 end
